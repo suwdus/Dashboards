@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+  <body>
+    <canvas id="myChart"></canvas>
+  <script>
+    var Http = new XMLHttpRequest();
+    var url = 'http://ec2-52-37-219-77.us-west-2.compute.amazonaws.com:8080';
+    Http.open('GET', url);
+    Http.send();
+
+    Http.onreadystatechange = (e) => {
+      console.log(Http.responseText);
+    }
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+            datasets: [{
+                label: '# Tasks complete',
+                backgroundColor: 'rgb(0, 255, 255)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 0, 1, 1, 0, 3, 1]
+            },
+              {
+                label: '# code commits',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 0, 0)',
+                data: [0, 1, 1, 1, 0, 1, 1]
+            }]
+        },
+
+        // Configuration options go here
+        options: {
+        }
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "taskmailer",
+  "version": "1.0.0",
+  "description": "Email me task info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Philip M. Turner",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.527.0",
+    "gmail-send": "^1.8.10",
+    "moment-timezone": "^0.5.26",
+    "underscore": "^1.9.1"
+  }
+}
