@@ -35,8 +35,6 @@ S3Util.prototype.getObjectFromBucket = function() {
         console.log('Could not get object from bucket',err);
         reject(err);
       } else
-        //this.translator.getStalledTasks(tasks);
-        console.log('Successfully got object from S3!', data);
         resolve(JSON.parse(data.Body.toString()));
     });
   });
