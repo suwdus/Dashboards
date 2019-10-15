@@ -9,7 +9,7 @@
 function DataUtil() {
 }
 
-DataUtil.prototype.getStartupData = function(startupData) {
+DataUtil.prototype.buildStartupData = function(startupData) {
   var _ = require('underscore');
 
   const tasks = this.getTasksForCurrentSprint(startupData);
