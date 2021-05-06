@@ -12,6 +12,6 @@
     "aws-sdk": "^2.527.0",
     "gmail-send": "^1.8.10",
     "moment-timezone": "^0.5.26",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   }
 }
